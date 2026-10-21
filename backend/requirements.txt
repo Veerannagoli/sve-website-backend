@@ -1,0 +1,7 @@
+Flask>=3.0,<4
+flask-cors>=4.0,<6
+gunicorn>=22,<24
+mysql-connector-python>=8.3,<10
+cloudinary>=1.40,<2
+python-dotenv>=1.0,<2
+itsdangerous>=2.1,<3

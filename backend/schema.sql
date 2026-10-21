@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS products (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(180) NOT NULL,
+  category VARCHAR(80) NOT NULL,
+  description TEXT NULL,
+  price DECIMAL(12,2) NULL,
+  image_url VARCHAR(2048) NOT NULL,
+  cloudinary_public_id VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_products_category (category),
+  INDEX idx_products_created_at (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
